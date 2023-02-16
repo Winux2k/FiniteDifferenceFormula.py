@@ -20,8 +20,7 @@ can hardly be put into use for numerical computing without, if possible, rewriti
 in a special way. Similarly, the more points are used, the more precise a formula
 is mathematically. However, due to rounding errors, this may not be true numerically.
 
-To run the code, you need the Python programming language (https://python.org/), a
-wonderful and amazing computing platform.
+To run the code, you need the Python programming language (https://python.org/).
 
 ## How to install the package
 
