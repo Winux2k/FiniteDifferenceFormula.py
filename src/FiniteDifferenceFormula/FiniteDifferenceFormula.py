@@ -1,31 +1,28 @@
 """
-Ported from a Julia package, https://github.com/Winux2k/FiniteDifferenceFormula.jl, this Python package
-provides a general finite difference formula generator and a tool for teaching/learning the finite
-difference method. It generates finite difference formulas for derivatives of various orders by using
-Taylor series expansions of a function at evenly spaced points. It also gives the truncation error of
-a formula in the big-O notation. We can use it to generate new formulas in addition to verification of
-known ones.
+Ported from a Julia package, https://github.com/Winux2k/FiniteDifferenceFormula.jl,
+this Python package provides a general finite difference formula generator and a
+tool for teaching/learning the finite difference method. It generates finite
+difference formulas for derivatives of various orders by using Taylor series
+expansions of a function at evenly spaced points. It also gives the truncation
+error of a formula in the big-O notation. We can use it to generate new formulas
+in addition to verification of known ones. By changing decimal places, we can
+also see how rounding errors may affect a result.
 
-We may play with this package when teaching/learning numerical computing, especially the finite
-difference method, and explore the distribution and symmetry in the coefficients of the formulas.
-By changing decimal places, we can also see how rounding errors may affect a result.
+Beware, though formulas are mathematically correct, they may not be numerically
+useful. This is true especially when we derive formulas for a derivative of higher
+order. For example, run compute(9,range(-5, 6)), provided by this package, to
+generate a 10-point central formula for the 9-th derivative. The formula is
+mathematically correct, but it can hardly be put into use for numerical computing
+without, if possible, rewriting it in a special way. Similarly, the more points
+are used, the more precise a formula is mathematically. However, due to rounding
+errors, this may not be true numerically.
 
-Beware, though formulas are mathematically correct, they may not be numerically useful. This is true
-especially when we derive formulas for a derivative of higher order. For example, run
-compute(9,range(-5, 6)), provided by this package, to generate a 10-point central formula for the
-9-th derivative. The formula is mathematically correct, but it can hardly be put into use for
-numerical computing without, if possible, rewriting it in a special way. Similarly, the more points
-are used, the more precise a formula is mathematically. However, due to rounding errors, this may
-not be true numerically.
+The package exports a class, FDFormula, fd (an object of the class), and member
+functions, activatepythonfunction, compute, decimalplaces, find, findbackward,
+findforward, formula, formulas, taylor, taylorcoefs, tcoefs, truncationerror,
+verifyformula.
 
-To run the code, you need the Python programming language (https://python.org/), a wonderful and
-amazing computing platform.
-
-The package exports a class, FDFormula, fd (an object of the class), and member functions,
-activatepythonfunction, compute, decimalplaces, find, findbackward, findforward, formula, formulas,
-taylor, taylorcoefs, tcoefs, truncationerror, verifyformula.
-
-See also https://github.com/Winux2k/FiniteDifferenceFormula.py/blob/main/README.md
+See also https://github.com/fdformula/FiniteDifferenceFormula.py/blob/main/README.md.
 """
 #-------------------------------------------------------------------------------
 # Name:        FiniteDifferenceFormula
