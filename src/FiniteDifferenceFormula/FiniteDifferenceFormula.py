@@ -1440,13 +1440,13 @@ class FDFormula:
         fd.formulas(3, 4, 11)              # the 3rd derivative
         """
         if min_num_of_points < 2:
-            print("Error: Invalid input, min_num_of_points =",
-                  min_num_of_points, ". It must be greater than 1.")
+            print("Error: Invalid input, min_num_of_points = ",
+                  min_num_of_points, ". It must be greater than 1.", sep = '')
             return
         elif max_num_of_points < min_num_of_points:
-            print("Error: Invalid input, max_num_of_points =",
-                  max_num_of_points, ". It must be greater than",
-                  min_num_of_points)
+            print("Error: Invalid input, max_num_of_points = ",
+                  max_num_of_points, ". It must be greater than ",
+                  min_num_of_points, ".", sep = '')
             return
 
         if isinstance(orders, int) and orders >= 1:
@@ -1456,13 +1456,13 @@ class FDFormula:
         elif isinstance(orders, list):
             for i in orders:
                 if not (isinstance(i, int) and i >= 1):
-                    print("Error: Invalid input, orders =", orders, ".",
-                          "A list of positive integers are expected,")
+                    print("Error: Invalid input, orders = ", orders, ".",
+                          "A list of positive integers are expected.", sep = '')
                     return
         else:
-            print("Error: Invalid input, orders =", orders, ".",
-                  "An positive integer or a list of positive integers",
-                  "are expected,")
+            print("Error: Invalid input, orders = ", orders, ".",
+                  "An positive integer or a list of positive integers ",
+                  "are expected.", sep = '')
             return
 
         oldlen = len(orders)
@@ -1471,7 +1471,6 @@ class FDFormula:
             print("Your input: formulas(", orders, ", ", min_num_of_points,
                   ", ", max_num_of_points, ")", sep = '')
 
-        half = round(max_num_of_points / 2)
         for n in orders:
             # forward schemes
             start = max(n + 1, min_num_of_points)
