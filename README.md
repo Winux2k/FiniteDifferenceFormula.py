@@ -6,7 +6,7 @@ and teaching/learning finite difference formulas. It generates finite difference
 for derivatives of various orders by using Taylor series expansions of a function at evenly
 spaced points. It also gives the truncation error of a formula in the big-O notation. We
 can use it to generate new formulas in addition to verification of known ones. By changing
-decimal places, we can also see how rounding errors may affect a result.
+decimal places, we can also investigate how rounding errors may affect a result.
 
 Beware, though formulas are mathematically correct, they may not be numerically useful.
 This is true especially when we derive formulas for a derivative of higher order. For
